@@ -1,1 +1,42 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form  [formGroup]="SignUp" >
+                <div class="form-group">
+                    <div class="input-group"> <div class="input-group-prepend"> <div class="input-group-text">Enter User/Admin</div></div></div>
+                    <select   formControlName="users" class="form-control dropdown-item">
+                        <option  *ngFor="let s of user" [value]=s>{{s}}</option>
+                  </select>
+                </div>
+                <!--Email-->
+                <div class="form-group">
+                    <input class="form-control" type="email" formControlName="email" placeholder="Enter the email">
+                <span class="alert" *ngIf="!SignUp.get('email')?.valid && SignUp.get('email')?.touched"> Invalid Email</span>                </div>
+                <!--User Name-->
+                <div class="form-group">
+                    <input type="text" formControlName="username" class="form-control" placeholder="Enter the username">
+                    <span class="alert" *ngIf="!SignUp.get('username')?.valid && SignUp.get('username')?.touched; ">Invalid userName !!!</span>
+                </div>
+                <!--Mobile Number-->
+                <div class="form-group">
+                    <input type="text" formControlName="mobile" class="form-control" placeholder="Enter the mobile number">
+                    <span class="alert" *ngIf="!SignUp.get('mobile')?.valid && SignUp.get('mobile')?.touched; ">Invalid Mobilenumber!!!</span>
+
+                </div>
+                <!--Password-->
+                <div class="form-group">
+                    <input type="password" formControlName="password" class="form-control" placeholder="Enter your password">
+                    <!--<span class="alert" >Passwords Don't Match</span>-->
+                </div>
+                <!--Confirm Password-->
+                <div class="form-group">
+                    <input type="password" formControlName="confirmpass" class="form-control" placeholder="Confirm your password">
+                </div>
+                <!--Login Button-->
+                <button class="btn btn-success">Signup</button> &nbsp;&nbsp;
+                <button class="btn btn-success">To Login</button>
+
+            </form>
+        </div>
+    </div>
+</div>
