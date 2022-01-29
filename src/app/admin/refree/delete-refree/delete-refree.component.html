@@ -1,0 +1,23 @@
+
+<div class="container">
+    <h1>Do You Want to Delete This Refree</h1>
+    <form style="width: fit-content; margin-top: 30px;" [formGroup]="DeleteForm"  (ngSubmit)="deleteRefree()">
+        <div class="form-group row ">
+            <label for="" class="col-sm-2 col-form-label">RefreeId</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_refreeId" readonly >
+            </div>
+            <label for="" class="col-sm-2 col-form-label">Refree Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_refreeName" readonly >
+            </div>
+            <label for="" class="col-sm-2 col-form-label">No Of Matches</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_noOfMatches" readonly>
+            </div>
+            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-primary float-right" type="submit" >Delete</button>
+        </div>
+   
+    </form>
+</div>

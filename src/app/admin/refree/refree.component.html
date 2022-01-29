@@ -1,0 +1,45 @@
+
+
+<table class="table table-striped">
+    <thead>
+      
+        
+        <th>Refree ID</th>
+        <th>Refree Name</th>
+        <th>Refree Experience</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of refree;let i = index">
+            <td>{{s.refreeId}}</td>
+            <td>{{s.refereeName}}</td>
+            <td>{{s.noOfMatches}}</td>
+            
+              <td><button type="button" routerLink="../editRefree" class="btn btn-primary" (click)="ToUpdate(i)">
+                Edit
+              </button></td>
+            <td><button class="btn btn-danger" (click)="delete(i)"routerLink="../deleteRefree">Delete</button></td>
+            
+        </tr>
+        
+    </tbody>
+</table>
+<!-- <app-add-refree></app-add-refree> -->
+<button routerLink="../addRefree" class="align-item-center">ADD</button>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-6 col-md-4 col-lg-3 mb-4"*ngFor="let s of venues;let i = index"  >
+
+            <div class="card " id="eventGrid" >
+                <img src="{{s}}" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{s.}}</h5>
+                    <div class="d-flex">
+                        <p class="card-text mx-4">Place: {{s.}}</p>
+                        <button type="button" id="editVenue" (click)="ToUpdate(i)" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                        <a class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="delete(i)"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

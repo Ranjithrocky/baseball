@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,7 @@ export class SignupComponent implements OnInit {
   SignUp!: FormGroup;
   user=['user','admin'];
 
-  constructor() { }
+  constructor(private routes: Router, private router:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.SignUp= new FormGroup({
@@ -21,6 +22,10 @@ export class SignupComponent implements OnInit {
       "password": new FormControl(null,Validators.required),
       "confirmpass": new FormControl(null,[Validators.minLength(8),Validators.maxLength(16)])
     })
+  }
+  toLogin(){
+    this.routes.navigate(['login']);
+
   }
 
 }
