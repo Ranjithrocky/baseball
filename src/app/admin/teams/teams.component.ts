@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TeamModel } from './team.model';
+import { TeamsService } from './teams.service';
 
 @Component({
   selector: 'app-teams',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teams.component.css']
 })
 export class TeamsComponent implements OnInit {
-
-  constructor() { }
+teams!:TeamModel[];
+  constructor(private service :TeamsService, private route: Router) { }
 
   ngOnInit(): void {
+    this.getTeams();
+  }
+  getTeams(){
+    this.service.getTeams().subscribe(data=>{
+      this.teams=data;
+    });
+
+  }
+  updateTeam(index:number)
+  {
+    this.service.edit=this.teams[index];
+    this.service.test();
+    this.route.navigate(['admin/editTeam'])
+
   }
 
 }

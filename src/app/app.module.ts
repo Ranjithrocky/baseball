@@ -22,6 +22,9 @@ import { AddRefreeComponent } from './admin/refree/add-refree/add-refree.compone
 import { EditRefreeComponent } from './admin/refree/edit-refree/edit-refree.component';
 import { AddVenueComponent } from './admin/venue/add-venue/add-venue.component';
 import { DeleteRefreeComponent } from './admin/refree/delete-refree/delete-refree.component';
+import { UsersComponent } from './users/users.component';
+import { TeamsComponent } from './admin/teams/teams.component';
+import { EditTeamComponent } from './admin/teams/edit-team/edit-team.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { DeleteRefreeComponent } from './admin/refree/delete-refree/delete-refre
     EditRefreeComponent,
     AddVenueComponent,
     DeleteRefreeComponent,
+    UsersComponent,
+    TeamsComponent,
+    EditTeamComponent
   
     
     
