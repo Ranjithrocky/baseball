@@ -1,0 +1,36 @@
+<p>add-team works!</p>
+<div  class="container">
+    <form style="width: fit-content; margin-top: 30px;" [formGroup]="TeamForm" (ngSubmit)="addTeams()">
+        <div class="form-group row ">
+            <label for="" class="col-sm-2 col-form-label">TeamId</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamId" >
+            </div>
+            <label for="" class="col-sm-2 col-form-label">Team Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamName" >
+            </div>
+            <label for="" class="col-sm-2 col-form-label">Image Url</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamImageUrl" >
+            </div>
+            
+            <label for="" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamDescription" >
+            </div>
+            
+            <label for="" class="col-sm-2 col-form-label">Team Location</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamLocation" >
+            </div>
+            <label for="" class="col-sm-2 col-form-label">No Of Players</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="_TeamPlayers" >
+            </div>
+            <button class="btn btn-danger" routerLink="../teams">Cancel</button>
+            <button class="btn btn-primary float-right" type="submit" >Edit</button>
+        </div>
+        </form>
+        
+    </div>

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import {  FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -25,6 +28,8 @@ import { DeleteRefreeComponent } from './admin/refree/delete-refree/delete-refre
 import { UsersComponent } from './users/users.component';
 import { TeamsComponent } from './admin/teams/teams.component';
 import { EditTeamComponent } from './admin/teams/edit-team/edit-team.component';
+import { AddTeamComponent } from './admin/teams/add-team/add-team.component';
+import { DeleteTeamComponent } from './admin/teams/delete-team/delete-team.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,9 @@ import { EditTeamComponent } from './admin/teams/edit-team/edit-team.component';
     DeleteRefreeComponent,
     UsersComponent,
     TeamsComponent,
-    EditTeamComponent
+    EditTeamComponent,
+    AddTeamComponent,
+    DeleteTeamComponent
   
     
     
@@ -59,7 +66,9 @@ import { EditTeamComponent } from './admin/teams/edit-team/edit-team.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule,    
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()    
     
   ],
   providers: [],

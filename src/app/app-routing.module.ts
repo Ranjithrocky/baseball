@@ -16,6 +16,8 @@ import { EditRefreeComponent } from "./admin/refree/edit-refree/edit-refree.comp
 import { DeleteRefreeComponent } from "./admin/refree/delete-refree/delete-refree.component";
 import { TeamsComponent } from "./admin/teams/teams.component";
 import { EditTeamComponent } from "./admin/teams/edit-team/edit-team.component";
+import { AddTeamComponent } from "./admin/teams/add-team/add-team.component";
+import { DeleteTeamComponent } from "./admin/teams/delete-team/delete-team.component";
 const appRoutes: Routes = [
     { path: "", redirectTo: "/login", pathMatch: 'full' },
     { path: "login", component: LoginComponent },
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
             { path: 'editRefree', component: EditRefreeComponent },
             { path: 'deleteRefree', component: DeleteRefreeComponent },
             {path:'teams',component:TeamsComponent},
-            {path:'editTeam',component:EditTeamComponent}
+            {path:'editTeam',component:EditTeamComponent},
+            {path:'addTeam',component:AddTeamComponent},
+            {path:'deleteTeam',component:DeleteTeamComponent}
 
         ]
     }]

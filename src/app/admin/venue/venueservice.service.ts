@@ -29,7 +29,7 @@ export class VenueserviceService {
     deleteVenueId!: VenueModel;
     deleteVenue(params: number): Observable<VenueModel> {
         let Url = this.APIUrl + "deleteVenue/";
-        return this.http.delete<VenueModel>(Url + params)
+        return this.http.delete<VenueModel>(Url + params);
 
     }
 

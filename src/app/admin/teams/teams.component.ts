@@ -28,5 +28,10 @@ teams!:TeamModel[];
     this.route.navigate(['admin/editTeam'])
 
   }
+  deleteTeam(index:number)
+  {
+    this.service.delete=this.teams[index];
+    this.route.navigate(['admin/deleteTeam'])
+  }
 
 }

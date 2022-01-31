@@ -8,11 +8,13 @@
                     <h5 class="card-title text-center">{{s.teamName}}</h5>
                     <div class="d-flex">
                         <p class="card-text mx-4">Place: {{s.location}}</p>
-                        <button type="button" id="editVenue"  id="editVenue" (click)="updateTeam(i)" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
-                        <a class="btn btn-sm btn-danger" data-bs-toggle="modal" id="deleteVenue" data-bs-target="#exampleModal"><i class="fas fa-trash"></i></a>
+                        <button type="button" id="editVenue"  id="editTeam" (click)="updateTeam(i)" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                        <!-- <a class="btn btn-sm btn-danger" data-bs-toggle="modal" id="deleteTeam" (click)="deleteTeam(i)" data-bs-target="#exampleModal"><i class="fas fa-trash"></i></a> -->
+                        <button class="btn btn-sm btn-danger" id="deleteTeam" (click)="deleteTeam(i)"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <button class="btn btn-primary" routerLink="../addTeam">Add Team</button>
 </div>
