@@ -1,0 +1,22 @@
+<div class="container m-4">
+  <table class="table table-striped" style="background-color: beige;">
+    <thead>
+      <th>Venue Name</th>
+      <th>Time</th>
+      <th>Date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of bookList;let i=index">
+        <td>{{s.eventName}}</td>
+        <td>{{s.eventTime}}</td>
+        <td>{{s.eventFromDate}}</td>
+  
+        <td> <button type="button" class="btn btn-primary" routerLink="../editbooking" (click)="edit(i)">
+            Edit
+          </button></td>
+        <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+  
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bookevent',
-  templateUrl: './bookevent.component.html',
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
   styles: [
   ]
 })
-export class BookeventComponent implements OnInit {
+export class AuthComponent implements OnInit {
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from '../displayuser/shared/user.model';
+import { UserModel } from '../../shared/user.model';
 
 @Component({
   selector: 'app-homepage',

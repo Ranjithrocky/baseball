@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
-import {  FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {   FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomepageComponent } from './homepage/homepage.component';
-import { BookeventComponent } from './bookevent/bookevent.component';
+import { HomepageComponent } from './users/homepage/homepage.component';
 import {HttpClientModule } from '@angular/common/http';
-import { DisplayuserComponent } from './displayuser/displayuser.component';
-import { EditUserComponent } from './displayuser/edit-user/edit-user.component';
-import { DeleteUserComponent } from './displayuser/delete-user/delete-user.component';
+import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.component';
+import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { VenueComponent } from './admin/venue/venue.component';
 import { EditVenueComponent } from './admin/venue/edit-venue/edit-venue.component';
@@ -30,6 +28,12 @@ import { TeamsComponent } from './admin/teams/teams.component';
 import { EditTeamComponent } from './admin/teams/edit-team/edit-team.component';
 import { AddTeamComponent } from './admin/teams/add-team/add-team.component';
 import { DeleteTeamComponent } from './admin/teams/delete-team/delete-team.component';
+import { DisplayuserComponent } from './admin/displayuser/displayuser.component';
+import { ViewEventComponent } from './users/view-event/view-event.component';
+import { BookeventComponent } from './users/bookevent/bookevent.component';
+import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-event.component';
+import { EditBookingComponent } from './users/bookevent/edit-booking/edit-booking.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,6 @@ import { DeleteTeamComponent } from './admin/teams/delete-team/delete-team.compo
     SignupComponent,
     LoginComponent,
     HomepageComponent,
-    BookeventComponent,
     DisplayuserComponent,
     EditUserComponent,
     DeleteUserComponent,
@@ -55,7 +58,12 @@ import { DeleteTeamComponent } from './admin/teams/delete-team/delete-team.compo
     TeamsComponent,
     EditTeamComponent,
     AddTeamComponent,
-    DeleteTeamComponent
+    DeleteTeamComponent,
+    ViewEventComponent,
+    BookeventComponent,
+    ViewbookedEventComponent,
+    EditBookingComponent,
+    AuthComponent
   
     
     

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ServicedService } from '../serviced.service';
-import { UserModel } from '../shared/user.model';
+import { ServicedService } from '../../displayuser/serviced.service';
+import { UserModel } from '../../../shared/user.model';
 
 @Component({
   selector: 'app-edit-user',

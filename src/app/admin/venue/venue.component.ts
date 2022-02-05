@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { VenueModel } from 'src/app/displayuser/shared/venue.model';
+import { VenueModel } from 'src/app/shared/venue.model';
 import { VenueserviceService } from './venueservice.service';
 
 @Component({
