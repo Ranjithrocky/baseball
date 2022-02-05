@@ -24,10 +24,10 @@ user!: string;
       this.routes.navigate(['signup']);   }
       tohome(){
         // this.routes.navigate(['homepage']);
-      let _email=this.LoginF.get('email')?.value;
+      let _email=this.LoginF.get('username')?.value;
       let _password=this.LoginF.get('password')?.value;
       
-      
+      console.log(_password);
       //Admin Check
       if(_email === 'admin@gmail.com'){
         
@@ -51,11 +51,13 @@ user!: string;
         this.authservice.LoginCheck(_email,_password).subscribe(data=>{
           this.auth=data.allowed;
           this.user=data.user;
+          
         });
+        console.log(this.user);
         //Navigate after validation
         setTimeout(()=>{
           if(this.auth){
-            this.routes.navigate([this.user,"homepage"]);
+            this.routes.navigate(["user","homepage"]);
           }else{
             alert("User Not Found");
           }

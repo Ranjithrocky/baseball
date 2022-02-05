@@ -40,6 +40,9 @@
                                 <div class="form-group form-row">
                                     <input type="password" formControlName="password" placeholder="Password"
                                         class="form-control">
+                                        <!-- <span class="alert"
+                                        *ngIf="!LoginF.get('username')?.valid && LoginF.get('username')?.touched; ">Invalid userName
+                                        !!!</span> -->
                                 </div>&nbsp;
                                 <div class="form-row">
                                     <button class="btn btn-primary" (click)="tohome()">Login</button>

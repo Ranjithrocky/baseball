@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   
   constructor(private authservice: AuthenticationService ,private routes: Router, private router:ActivatedRoute) { }
   // let btn=document.getElementById("btn");
-  @ViewChild ("btn") btn!:ElementRef
+ 
   ngOnInit(): void {
     this.SignUp= new FormGroup({
       // "users": new FormControl(null,Validators.required),

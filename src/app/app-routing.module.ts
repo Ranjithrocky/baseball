@@ -29,20 +29,22 @@ const appRoutes: Routes = [
     { path: "login", component: LoginComponent },
     { path: "signup", component: SignupComponent },
 
-{path:'user',component:UsersComponent,
- children:[
-{path:'homepage',component:HomepageComponent},
-{path:'bookEvent',component:BookeventComponent},
-{path:'viewbooking',component:ViewbookedEventComponent},
-{path:'editbooking',component:EditBookingComponent}
-]},
+    {
+        path: 'user', component: UsersComponent,
+        children: [
+            { path: 'homepage', component: HomepageComponent },
+            { path: 'bookEvent', component: BookeventComponent },
+            { path: 'viewbooking', component: ViewbookedEventComponent },
+            { path: 'editbooking', component: EditBookingComponent }
+        ]
+    },
     {
         path: "admin",
         component: AdminComponent,
         children: [
             { path: "display", component: DisplayuserComponent },
-            {path:'editUser',component:EditUserComponent},
-            {path:'deleteUser',component:DeleteUserComponent},
+            { path: 'editUser', component: EditUserComponent },
+            { path: 'deleteUser', component: DeleteUserComponent },
             { path: 'view', component: ViewVenueComponent },
             { path: 'edit', component: EditVenueComponent },
             { path: 'addVenue', component: AddVenueComponent },
@@ -50,10 +52,10 @@ const appRoutes: Routes = [
             { path: 'addRefree', component: AddRefreeComponent },
             { path: 'editRefree', component: EditRefreeComponent },
             { path: 'deleteRefree', component: DeleteRefreeComponent },
-            {path:'teams',component:TeamsComponent},
-            {path:'editTeam',component:EditTeamComponent},
-            {path:'addTeam',component:AddTeamComponent},
-            {path:'deleteTeam',component:DeleteTeamComponent}
+            { path: 'teams', component: TeamsComponent },
+            { path: 'editTeam', component: EditTeamComponent },
+            { path: 'addTeam', component: AddTeamComponent },
+            { path: 'deleteTeam', component: DeleteTeamComponent }
 
         ]
     }]
