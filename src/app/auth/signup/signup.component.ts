@@ -1,5 +1,4 @@
-import { BuiltinTypeName } from '@angular/compiler';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserModel } from 'src/app/shared/user.model';
@@ -14,7 +13,7 @@ export class SignupComponent implements OnInit {
   SignUp!: FormGroup;
   user=['user','admin'];
   
-  constructor(private authservice: AuthenticationService ,private routes: Router, private router:ActivatedRoute) { }
+  constructor(private authservice: AuthenticationService ,private routes: Router) { }
   // let btn=document.getElementById("btn");
  
   ngOnInit(): void {
@@ -48,14 +47,7 @@ PassCheck(){
     this.PassMatch=false
   }
 }
-
-
-
-
-
-
-
-  signUp()
+signUp()
   {
     const body : UserModel = {
       Email : this.SignUp.get('email')?.value,
@@ -69,17 +61,13 @@ PassCheck(){
 setTimeout(()=>{
   this.authservice.route.navigate(['../login'])
 })
-
   }
   toLogin(){
     this.routes.navigate(['login']);
-
   }
   users(elem :HTMLElement)
   {
     elem.style.left='0'
-    
-
   }
   admin(elem:HTMLElement)
   {
