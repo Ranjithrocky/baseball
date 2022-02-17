@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserModel } from 'src/app/shared/user.model';
 import { ServicedService } from './serviced.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { ServicedService } from './serviced.service';
   ]
 })
 export class DisplayuserComponent implements OnInit {
-UserList:any=[];
+UserList!:UserModel[];
 ActivatedEditButton:boolean=false;
-depe!:any;
+depe!:UserModel;
 
   constructor(private service: ServicedService) { }
 
@@ -29,11 +30,16 @@ close()
   getdetails(){
     this.service.getUser().subscribe(data=>{
       this.UserList=data;
+      
+    console.log(data);
     })
   }
-  delete(item: any)
+  delete(item: number)
   {
-    this.depe=item;
-
+    this.depe=this.UserList[item];
+    console.log(this.UserList[item]);
+    this.service.deleteUser(this.depe.username).subscribe();
+    this.UserList.splice(item,1);
+    
   }
 }

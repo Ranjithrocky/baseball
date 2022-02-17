@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { UserModel } from 'src/app/shared/user.model';
 import { AuthenticationService } from '../authentication.service';
 
@@ -12,7 +12,7 @@ import { AuthenticationService } from '../authentication.service';
 export class SignupComponent implements OnInit {
   SignUp!: FormGroup;
   user=['user','admin'];
-  
+  auth!:boolean;
   constructor(private authservice: AuthenticationService ,private routes: Router) { }
   // let btn=document.getElementById("btn");
  
@@ -50,17 +50,26 @@ PassCheck(){
 signUp()
   {
     const body : UserModel = {
-      Email : this.SignUp.get('email')?.value,
-      Password : this.SignUp.get('password')?.value,
-      Username : this.SignUp.get('username')?.value,
-      MobileNumber : this.SignUp.get('mobileNumber')?.value,
-      UserRole : "user"
+      email : this.SignUp.get('email')?.value,
+      password : this.SignUp.get('password')?.value,
+      username : this.SignUp.get('username')?.value,
+      mobileNumber : this.SignUp.get('mobile')?.value,
+      userRole : "user"
   }
   //Post the value to UserModel
-  this.authservice.SignUpCustomer(body).subscribe();
+  console.log(body);
+  this.authservice.SignUpCustomer(body).subscribe(data=>{
+    console.log(data);
+    this.auth=data.allowed;
+    // if(this.auth)
+    // {
+    //   this.authservice.route.navigate(['user','homepage']);
+
+    // }
+  });
 setTimeout(()=>{
   this.authservice.route.navigate(['../login'])
-})
+},100)
   }
   toLogin(){
     this.routes.navigate(['login']);

@@ -35,16 +35,16 @@ Search Component is pending,
         <th>User Type</th>
     </thead>
     <tbody>
-        <tr *ngFor="let s of UserList">
-            <td>{{s.email}}</td>
+        <tr *ngFor="let s of UserList;let i=index">
+            <td>{{s.email}}</td> 
             <td>{{s.username}}</td>
             <td>{{s.mobileNumber}}</td>
             <td>{{s.userRole}}</td>
               <td>  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Edit
               </button></td>
-            <td><button class="btn btn-danger" (click)="delete(s)" >Delete</button></td>
-            <app-delete-user [user]="depe"></app-delete-user>
+            <td><button class="btn btn-danger" (click)="delete(i)" >Delete</button></td>
+           
         </tr>
         
     </tbody>

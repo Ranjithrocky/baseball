@@ -78,21 +78,21 @@
                                 </div> -->
                                 <!-- <div class="form-box"> -->
                                     <div class="button-box">
-                                        <div id="btn" #btn></div>
+                                        <div id="btn"  #btn></div>
                                             <button class="toggle-btn" (click)="users(btn)" type="button">User</button>
                                             <button class="toggle-btn" (click)="admin(btn)" type="button">Admin</button>
                                     </div>
                                    &nbsp;
                                 <!--Email-->
                                 <div class="form-group">
-                                    <input class="form-control" type="email" formControlName="email" placeholder="Enter the email">
+                                    <input id="email" class="form-control" type="email" formControlName="email" placeholder="Enter the email">
                                     <span class="alert" *ngIf="!SignUp.get('email')?.valid && SignUp.get('email')?.touched"> Invalid
                                         Email</span>
                                 </div>
                                 &nbsp;
                                 <!--User Name-->
                                 <div class="form-group">
-                                    <input type="text" formControlName="username" class="form-control" placeholder="Enter the username">
+                                    <input type="text" formControlName="username" id="username" class="form-control" placeholder="Enter the username">
                                     <span class="alert"
                                         *ngIf="!SignUp.get('username')?.valid && SignUp.get('username')?.touched; ">Invalid userName
                                         !!!</span>
@@ -100,7 +100,7 @@
                                 &nbsp;
                                 <!--Mobile Number-->
                                 <div class="form-group">
-                                    <input type="text" formControlName="mobile" class="form-control"
+                                    <input type="text" formControlName="mobile" id="mobileNumber" class="form-control"
                                         placeholder="Enter the mobile number">
                                     <span class="alert" *ngIf="!SignUp.get('mobile')?.valid && SignUp.get('mobile')?.touched; ">Invalid
                                         Mobile Number!!!</span>
@@ -109,21 +109,23 @@
                                 &nbsp;
                                 <!--Password-->
                                 <div class="form-group">
-                                    <input type="password" formControlName="password" class="form-control"
+                                    <input type="password" formControlName="password" id="password" class="form-control"
                                         placeholder="Enter your password">
                                     <!--<span class="alert" >Passwords Don't Match</span>-->
                                 </div>
                                 &nbsp;
                                 <!--Confirm Password-->
                                 <div class="form-group">
-                                    <input type="password" formControlName="confirmpass" (change)="PassCheck()" class="form-control"
+                                    <input type="password" formControlName="confirmpass" id="confirmPassword" (change)="PassCheck()" class="form-control"
                                         placeholder="Confirm your password">
                                 </div>
                                 <!--Sign Up-->
                                 &nbsp;
                                 <div class="align-items-center">
-                                <button class="btn btn-success" (click)="signUp()">Signup</button> &nbsp;
-                                <p>Have an Account <a href="" (click)="toLogin()">Login</a></p>
+                                <button class="btn btn-success" id="submitButton" (click)="signUp()">Signup</button> &nbsp;
+
+<!--Navigate to Login Page-->
+                                 <a id="loginButton" routerLink="../login">Login</a>
                             </div>
                             </form>
                         </div>

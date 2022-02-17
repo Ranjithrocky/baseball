@@ -19,7 +19,6 @@ import { EditTeamComponent } from "./admin/teams/edit-team/edit-team.component";
 import { AddTeamComponent } from "./admin/teams/add-team/add-team.component";
 import { DeleteTeamComponent } from "./admin/teams/delete-team/delete-team.component";
 import { DisplayuserComponent } from "./admin/displayuser/displayuser.component";
-import { DeleteUserComponent } from "./admin/displayuser/delete-user/delete-user.component";
 import { UsersComponent } from "./users/users.component";
 import { BookeventComponent } from "./users/bookevent/bookevent.component";
 import { ViewbookedEventComponent } from "./users/viewbooked-event/viewbooked-event.component";
@@ -44,7 +43,6 @@ const appRoutes: Routes = [
         children: [
             { path: "display", component: DisplayuserComponent },
             { path: 'editUser', component: EditUserComponent },
-            { path: 'deleteUser', component: DeleteUserComponent },
             { path: 'view', component: ViewVenueComponent },
             { path: 'edit', component: EditVenueComponent },
             { path: 'addVenue', component: AddVenueComponent },

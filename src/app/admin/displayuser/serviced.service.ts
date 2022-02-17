@@ -9,9 +9,9 @@ export class ServicedService {
 readonly APIUrl="https://localhost:44322/api"
   constructor(private http:HttpClient) { }
 //get the user by sending the httpClient request 
-  getUser():Observable<any[]>
+  getUser():Observable<UserModel[]>
   {
-    return this.http.get<any>('https://localhost:5001/api/admin/getUsers');
+    return this.http.get<UserModel[]>('https://localhost:5001/api/admin/getUsers');
   }
 
   //Update the user by sending the object to backend
@@ -21,9 +21,9 @@ readonly APIUrl="https://localhost:44322/api"
     return this.http.put<UserModel>("https://localhost:5001/api/admin/edit",body);
      
   }
-  deleteUser(body:any):Observable<any>
+  deleteUser(body:string):Observable<string>
   {
-    return this.http.delete<any>("https://localhost:5001/api/admin/user_delete",body);
+        return this.http.delete<string>("https://localhost:5001/api/admin/user_delete/"+body);
   }
   
  }

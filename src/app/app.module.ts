@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './users/homepage/homepage.component';
 import {HttpClientModule } from '@angular/common/http';
 import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.component';
-import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { VenueComponent } from './admin/venue/venue.component';
 import { EditVenueComponent } from './admin/venue/edit-venue/edit-venue.component';
@@ -43,7 +42,6 @@ import { AuthComponent } from './auth/auth.component';
     HomepageComponent,
     DisplayuserComponent,
     EditUserComponent,
-    DeleteUserComponent,
     AdminComponent,
     VenueComponent,
     EditVenueComponent,

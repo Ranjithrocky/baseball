@@ -35,11 +35,11 @@ UserValue!:UserModel
 {
 
   const body:UserModel={
-    Email:this.EditForm?.get('Email')?.value,
-    Password:this.EditForm?.get('Password')?.value,
-    Username:this.EditForm?.get('UserName')?.value,
-    MobileNumber:this.EditForm?.get('Mobile')?.value,
-    UserRole:this.EditForm?.get('Userole')?.value
+    email:this.EditForm?.get('Email')?.value,
+    password:this.EditForm?.get('Password')?.value,
+    username:this.EditForm?.get('UserName')?.value,
+    mobileNumber:this.EditForm?.get('Mobile')?.value,
+    userRole:this.EditForm?.get('Userole')?.value
   }
   this.service.updateUser(body).subscribe(resp=>{
     console.log(resp);

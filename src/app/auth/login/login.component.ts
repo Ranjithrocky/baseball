@@ -28,17 +28,15 @@ export class LoginComponent implements OnInit {
     let _email = this.LoginF.get('email')?.value;
     let _password = this.LoginF.get('password')?.value;
 
-    console.log(_password);
     //Admin Check
     if (_email === 'admin@gmail.com') {
 
       this.authservice.AdminCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
-        console.log(this.auth);
-      });
+              });
       //Navigation after Validation
       setTimeout(() => {
-        if (this.auth) {
+        if (this.auth) { 
           this.routes.navigate(['../admin/view'])
         }
         else {
@@ -53,7 +51,7 @@ export class LoginComponent implements OnInit {
         this.user = data.user;
 
       });
-      console.log(this.user);
+      
       //Navigate after validation
       setTimeout(() => {
         if (this.auth) {

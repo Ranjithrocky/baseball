@@ -1,9 +1,9 @@
 export interface UserModel{
 
-    Email: string,
-    Password: string,
-    Username:string,
-    MobileNumber:string,
-    UserRole: string
+    email: string,
+    password: string,
+    username:string,
+    mobileNumber:string,
+    userRole: string
 
 }

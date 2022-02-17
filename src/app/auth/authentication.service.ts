@@ -16,7 +16,7 @@ API='https://localhost:5001/';
 //Login check For Customer
 LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
   let Url=this.API+'user/login';
-  const body={email:_email, password: _password}
+  const body={email: _email, password: _password}
   return this.http.post<ResponseModel>(Url,body);
 }
 //Check For Admins
@@ -31,3 +31,4 @@ SignUpCustomer(body:UserModel): Observable<AdminResponseModel>{
 }
 
 }
+ 
