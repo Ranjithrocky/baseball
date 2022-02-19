@@ -20,6 +20,7 @@ export class ViewVenueComponent implements OnInit {
     this.getDetails();
 
   }
+  // get all the details from the service 
   getDetails() {
     this.service.getVenue().subscribe(data => {
       this.venues = data;
