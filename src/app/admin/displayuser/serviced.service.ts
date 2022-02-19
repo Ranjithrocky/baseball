@@ -21,6 +21,7 @@ readonly APIUrl="https://localhost:44322/api"
     return this.http.put<UserModel>("https://localhost:5001/api/admin/edit",body);
      
   }
+  deleteuser!:UserModel;
   deleteUser(body:string):Observable<string>
   {
         return this.http.delete<string>("https://localhost:5001/api/admin/user_delete/"+body);

@@ -40,6 +40,6 @@ close()
     console.log(this.UserList[item]);
     this.service.deleteUser(this.depe.username).subscribe();
     this.UserList.splice(item,1);
-    
+    this.service.deleteuser=this.depe;
   }
 }
