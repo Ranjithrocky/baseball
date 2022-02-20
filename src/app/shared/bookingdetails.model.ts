@@ -1,3 +1,4 @@
+// This  provide model for the booking details form 
 export interface BookingDetails {
     bookingId: number,
     eventName: string,

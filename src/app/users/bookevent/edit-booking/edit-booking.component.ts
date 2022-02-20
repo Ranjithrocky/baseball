@@ -14,7 +14,7 @@ export class EditBookingComponent implements OnInit {
 EditForm!:FormGroup;
 editValue!:BookingDetails
   constructor(private route:Router,private service:BookeventService) { }
-
+//Get the details when ever I get the details...
   ngOnInit(): void {
     this.editValue=this.service.editBody;
     this.EditForm =new FormGroup({

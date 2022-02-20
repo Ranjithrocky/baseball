@@ -13,13 +13,14 @@ export class LoginComponent implements OnInit {
   auth!: boolean;
   user!: string;
   constructor(private routes: Router, private authservice: AuthenticationService) { }
-
+//This gets the credentials form the users
   ngOnInit(): void {
     this.LoginF = new FormGroup({
       "email": new FormControl(null, [Validators.required, Validators.email]),
       "password": new FormControl(null, [Validators.required, Validators.pattern("[a-zA-Z0-9_@#$!?></|+*]{8,12}")])
     })
   }
+  //Navigate to Signup page
   toSignUp() {
     this.routes.navigate(['signup']);
   }
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
       this.authservice.AdminCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
               });
-      //Navigation after Validation
+      //Navigation after authentication
       setTimeout(() => {
         if (this.auth) { 
           this.routes.navigate(['../admin/view'])
@@ -44,7 +45,7 @@ export class LoginComponent implements OnInit {
         }
       }, 100);
     }
-    //Authentication for Customer
+    //Authentication for Customer using the loginCheck 
     else {
       this.authservice.LoginCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;

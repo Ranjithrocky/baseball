@@ -25,6 +25,7 @@ AdminCheck(_email:string, _pass:string): Observable<AdminResponseModel>{
   const body={email: _email,password:_pass}
   return this.http.post<AdminResponseModel>(Url,body);
 }
+//Signup by getting the details from 
 SignUpCustomer(body:UserModel): Observable<AdminResponseModel>{
   let Url =this.API+'user/signup';
   return this.http.post<AdminResponseModel>(Url,body);
