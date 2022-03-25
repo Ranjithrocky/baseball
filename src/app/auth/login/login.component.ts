@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
 
       this.authservice.AdminCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
+        this.authservice.adminlogin=this.auth;
               });
       //Navigation after authentication
       setTimeout(() => {
@@ -50,6 +51,7 @@ export class LoginComponent implements OnInit {
       this.authservice.LoginCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
         this.user = data.user;
+        this.authservice.allowlogin=this.auth;
 
       });
       

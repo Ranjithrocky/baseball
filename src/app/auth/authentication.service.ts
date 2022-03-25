@@ -14,12 +14,14 @@ export class AuthenticationService {
 API='https://localhost:5001/';
 
 //Login check For Customer
+allowlogin!:boolean;
 LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
   let Url=this.API+'user/login';
   const body={email: _email, password: _password}
   return this.http.post<ResponseModel>(Url,body);
 }
 //Check For Admins
+adminlogin!:boolean;
 AdminCheck(_email:string, _pass:string): Observable<AdminResponseModel>{
   let Url=this.API+'admin/login';
   const body={email: _email,password:_pass}
