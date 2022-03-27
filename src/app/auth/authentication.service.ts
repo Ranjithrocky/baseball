@@ -20,6 +20,13 @@ LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
   const body={email: _email, password: _password}
   return this.http.post<ResponseModel>(Url,body);
 }
+email:string="";
+
+   //~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~
+   getUserEmail(_email:string){
+    this.email= _email;
+};
+//~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~
 //Check For Admins
 adminlogin!:boolean;
 AdminCheck(_email:string, _pass:string): Observable<AdminResponseModel>{

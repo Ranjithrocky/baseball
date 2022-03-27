@@ -37,8 +37,7 @@ const appRoutes: Routes = [
             { path: 'bookEvent', component: BookeventComponent },
             { path: 'viewbooking', component: ViewbookedEventComponent },
             { path: 'editbooking', component: EditBookingComponent },
-            { path: 'sample', component: SampleComponent }
-
+            
         ],
         canActivateChild:[CustomerGaurd]
     },

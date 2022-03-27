@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification-service.service';
+import { PlayerModel } from '../player.model';
 import { TeamModel } from '../team.model';
 import { TeamsService } from '../teams.service';
 
@@ -13,6 +14,7 @@ import { TeamsService } from '../teams.service';
 export class EditTeamComponent implements OnInit {
 editValue!: TeamModel;
 TeamForm!:FormGroup;
+PlayerList!:PlayerModel[];
   constructor(private service:TeamsService, private route:Router, private notify:NotificationService) { }
 
   ngOnInit(): void {
@@ -50,5 +52,15 @@ TeamForm!:FormGroup;
     })
     this.notify.showSuccess("","Team Edited Successfully");
   }
+
+
+getdetails(){
+  let params=this.editValue.teamId;
+  this.service.getPlayers(params).subscribe(data=>{
+    this.PlayerList=data;
+  // console.log(data);
+    // console.log(this.PlayerList)
+  })
+}
 
 }

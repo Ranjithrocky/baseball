@@ -34,6 +34,13 @@ import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-ev
 import { EditBookingComponent } from './users/bookevent/edit-booking/edit-booking.component';
 import { AuthComponent } from './auth/auth.component';
 import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
+import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
+import { TeamSearchPipe } from './admin/teams/team-search.pipe';
+import { AddPlayerComponent } from './admin/teams/add-player/add-player.component';
+import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
+import { SearchFilterPipe } from './users/view-event/search-filter.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -63,8 +70,12 @@ import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user
     ViewbookedEventComponent,
     EditBookingComponent,
     AuthComponent,
-    DeleteUserComponent
-  
+    DeleteUserComponent,
+    RefreeSearchPipe,
+    TeamSearchPipe,
+    AddPlayerComponent,
+    VenueSearchPipe,
+    SearchFilterPipe  
     
     
     

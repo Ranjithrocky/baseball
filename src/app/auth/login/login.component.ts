@@ -28,7 +28,9 @@ export class LoginComponent implements OnInit {
     // this.routes.navigate(['homepage']);
     let _email = this.LoginF.get('email')?.value;
     let _password = this.LoginF.get('password')?.value;
-
+//~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~~`
+this.authservice.getUserEmail(_email);
+//~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~`~~~~~~~~~~~`
     //Admin Check
     if (_email === 'admin@gmail.com') {
 

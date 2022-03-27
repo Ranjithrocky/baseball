@@ -10,6 +10,7 @@ import { RefreeService } from './refree.service';
 })
 export class RefreeComponent implements OnInit {
 refree!:RefereeModel[];
+searchString:string='';
   constructor(private service:RefreeService) { }
 
   ngOnInit(): void {
