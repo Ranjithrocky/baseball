@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/auth/authentication.service';
 import { BookingDetails } from 'src/app/shared/bookingdetails.model';
+import { VenueModel } from 'src/app/shared/venue.model';
 import { BookeventService } from '../bookevent.service';
 
 @Component({
@@ -12,14 +14,21 @@ import { BookeventService } from '../bookevent.service';
 })
 export class BookeventComponent implements OnInit {
 bookevent!:FormGroup;
-  constructor(private route:Router, private service:BookeventService) { }
+
+Venue!:VenueModel;
+email!:string
+
+
+  constructor(private route:Router, private auth : AuthenticationService,private service:BookeventService) { }
 
   ngOnInit(): void {
+    this.email=this.auth.email;
+    this.Venue=this.service.book;
     this.bookevent =new FormGroup({
-      eventName: new FormControl(null,Validators.required),
+      eventName: new FormControl(this.Venue.venueName,Validators.required),
       applicantName: new FormControl(null,Validators.required),
       applicantMobileNo: new FormControl(null,Validators.required),
-      applicantEmailId: new FormControl(null,Validators.required),
+      applicantEmailId: new FormControl({value:this.email ,disabled: true},Validators.required),
       applicantAddress: new FormControl(null,Validators.required),
       eventAddress: new FormControl(null,Validators.required),
       eventTime: new FormControl(null,Validators.required),

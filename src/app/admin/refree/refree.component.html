@@ -71,7 +71,7 @@
         <div class="col"*ngFor="let refree of refree;let i = index"  >
 
             <div class="card h-100 "  id="umpireGrid{{i}}" style="width: 20rem;border-radius: 10px;" >
-                <img src="" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
+                <img src={{refree.imgUrl}} style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{refree.refereeName}}</h5>
                     <!-- <div class="d-flex"> -->

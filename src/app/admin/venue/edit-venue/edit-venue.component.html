@@ -1,6 +1,7 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Roboto:ital,wght@0,500;1,900&display=swap');
+
     /* .body{
        background-color: rgb(236, 236, 236);
        position: absolute; 
@@ -14,6 +15,9 @@
     label{
         margin-left: 10px;
         color: rgb(0, 0, 0);
+    }
+    .hh{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     
     .container{
@@ -30,7 +34,7 @@
             <div class="col-12 col-md-12 col-lg-10 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-3">Edit Venue</h2>
+                        <h2 class="text-center mb-3 " style="font-family: 'Lobster', cursive;">Edit Venue</h2>
                         <form style="width: fit-content; margin-top: 30px;" [formGroup]="EditForm"
                             (ngSubmit)="updateVenue()">
                             <div class="form-group row ">
@@ -57,10 +61,7 @@
                                 </div>
                                 
                                 
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="capacityOfVenue" formControlName="_VenueDescription" placeholder="">
-                                    <label for="capacityOfVenue">Capacity</label>
-                                </div>
+                                
 
                                 
                                 <div class="form-floating">

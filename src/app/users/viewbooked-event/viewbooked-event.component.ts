@@ -30,7 +30,7 @@ export class ViewbookedEventComponent implements OnInit {
   getdetails(){
     this.service.getbooking(this.email).subscribe(data=>{
       this.bookList=data;
-      // console.log(this.bookLists);
+      console.log(this.bookLists);
     })
   }
   

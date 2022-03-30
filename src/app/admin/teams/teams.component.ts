@@ -27,6 +27,7 @@ searchString:string='';
     this.service.edit=this.teams[index];
     this.service.test();
     this.route.navigate(['admin/editTeam'])
+    
 
   }
   deleteTeam(index:number)

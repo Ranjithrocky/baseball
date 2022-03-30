@@ -18,7 +18,8 @@ export class AddRefreeComponent implements OnInit {
       {
         _refreeId:new FormControl(null,Validators.required),
         _refreeName: new FormControl(null,Validators.required),
-        _noOfMatches: new FormControl(null,Validators.required)
+        _noOfMatches: new FormControl(null,Validators.required),
+        _imgUrl:new FormControl(null,Validators.required)
       }
     )
   }
@@ -26,7 +27,8 @@ export class AddRefreeComponent implements OnInit {
     const body: RefereeModel={
       refreeId:this.AddForm?.get('_refreeId')?.value,
       refereeName:this.AddForm?.get('_refreeName')?.value,
-      noOfMatches:this.AddForm?.get('_noOfMatches')?.value
+      noOfMatches:this.AddForm?.get('_noOfMatches')?.value,
+      imgUrl:this.AddForm?.get('_imgUrl')?.value
     }
     this.service.addRefree(body).subscribe(x=>{
       console.log(body);

@@ -8,7 +8,7 @@
             <div class="col-12 col-md-12 col-lg-10 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-3">Edit Refree</h2>
+                        <h2 class="text-center mb-3" style="font-family: 'Lobster', cursive;">Edit Refree</h2>
                         <form style="width: fit-content; margin-top: 30px;" [formGroup]="EditForm" (ngSubmit)="editRefree()">
                             <div class="form-group row ">
                                 <label for="" class="col-sm-3 col-form-label">RefreeId</label>
@@ -22,6 +22,10 @@
                                 <label for="" class="col-sm-3 col-form-label">No Of Matches</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" formControlName="_noOfMatches">
+                                </div>
+                                <label for="" class="col-sm-3 col-form-label">ImgUrl</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" formControlName="_imgUrl">
                                 </div>
                                 <div class="btn-group mt-4">
                                 <button class="btn btn-danger" style="margin-right: 5px;">Cancel</button>

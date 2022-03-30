@@ -47,6 +47,8 @@ export class AddPlayerComponent implements OnInit {
         this.route.navigate(['admin/addTeam']);
       })
     })
+    this.PlayerForm.reset();
+    
     
   }
   

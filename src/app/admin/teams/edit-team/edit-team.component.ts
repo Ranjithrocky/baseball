@@ -30,6 +30,7 @@ PlayerList!:PlayerModel[];
       }
     );
     console.log(this.editValue);
+    this.getdetails();
   }
   updateTeams()
   {

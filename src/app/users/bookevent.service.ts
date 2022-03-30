@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BookingDetails } from 'src/app/shared/bookingdetails.model';
+import { VenueModel } from '../shared/venue.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { BookingDetails } from 'src/app/shared/bookingdetails.model';
 export class BookeventService {
 readonly API="https://localhost:5001/api/EventBooking/"
   constructor(private http: HttpClient) { }
+  book !: VenueModel;
   addBooking(body:BookingDetails):Observable<BookingDetails>{
     let Url=this.API+'bookEvent/';
     return this.http.post<BookingDetails>(Url,body);

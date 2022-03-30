@@ -20,7 +20,8 @@ this.editvalue=this.service.editrefree;
       {
         _refreeId:new FormControl(this.editvalue.refreeId,Validators.required),
         _refreeName: new FormControl(this.editvalue.refereeName,Validators.required),
-        _noOfMatches: new FormControl(this.editvalue.noOfMatches,Validators.required)
+        _noOfMatches: new FormControl(this.editvalue.noOfMatches,Validators.required),
+        _imgUrl:new FormControl(this.editvalue.imgUrl,Validators.required)
       }
     )
   }
@@ -29,7 +30,8 @@ this.editvalue=this.service.editrefree;
     const body: RefereeModel={
       refreeId:this.EditForm?.get('_refreeId')?.value,
       refereeName:this.EditForm?.get('_refreeName')?.value,
-      noOfMatches:this.EditForm?.get('_noOfMatches')?.value
+      noOfMatches:this.EditForm?.get('_noOfMatches')?.value,
+      imgUrl:this.EditForm?.get('_imgUrl')?.value
     }
     let params=this.editvalue.refreeId
     this.service.updateReferee(params,body).subscribe(x=>{

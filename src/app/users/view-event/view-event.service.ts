@@ -15,4 +15,6 @@ readonly APIUrl="https://localhost:5001/api/Venue/"
     return this.http.get<VenueModel[]>(Url);
  
   }
+  
+
 }
